@@ -1,8 +1,8 @@
  resource "aws_instance" "this" {
-    ami = "ami-09c813fb71547fc4f"
+    ami = var.ami_id
     vpc_security_group_ids = [aws_security_group.allow_tls.id]
-    subnet_id = "subnet-0f970ac6fb262b6cb"
-    instance_type = "t2.micro" 
+    subnet_id = var.subnet_id
+    instance_type = var.instance_type
     tags = var.ec2_tags
 }
 

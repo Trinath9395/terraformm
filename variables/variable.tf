@@ -9,6 +9,11 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
+variable "subnet_id" {
+  type = string
+  default = "subnet-0f970ac6fb262b6cb"
+}
+
 variable "ec2_tags" {
   type = map
   default = {
