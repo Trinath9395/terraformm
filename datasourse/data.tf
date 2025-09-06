@@ -18,3 +18,7 @@ data "aws_ami" "joindevops" {
   }
 }
 
+data "aws_vpc" "MY-VPC" {
+  id = var.aws_vpc
+}
+
