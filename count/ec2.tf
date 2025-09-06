@@ -5,9 +5,16 @@
     vpc_security_group_ids = [aws_security_group.allow_tls.id]
     subnet_id = "subnet-0f970ac6fb262b6cb"
     instance_type = "t2.micro" 
-   tags = {
+  /*  tags = {
     Name = var.instances[count.index]
-   }
+   } */
+
+   tags = merge(
+    var.common_tags,
+    {
+      Name = var.instances[count.index]
+    }
+   )
 }
 
 resource "aws_security_group" "allow_tls" {

@@ -13,3 +13,11 @@ variable "zone_id" {
 variable "domain_name" {
   default = "trinath.online"
 }
+
+variable "common_tags" {
+  type =map 
+  default = {
+    project = "expense"
+    Environment = "dev"
+  }  
+}
