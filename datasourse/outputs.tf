@@ -3,5 +3,5 @@ output "ami_id" {
 }
 
 output "aws_vpc" {
-  value = data.aws_vpc.MY-VPC.id 
+  value = data.aws_vpc.MY-VPC.id
 }

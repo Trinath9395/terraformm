@@ -1,46 +1,46 @@
 variable "ami_id" {
-  type = string
-  default = "ami-09c813fb71547fc4f"
+  type        = string
+  default     = "ami-09c813fb71547fc4f"
   description = "This is Redhat9 AMI ID"
 }
 
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t2.micro"
 }
 
 variable "subnet_id" {
-  type = string
+  type    = string
   default = "subnet-0f970ac6fb262b6cb"
 }
 
 variable "ec2_tags" {
-  type = map
+  type = map(any)
   default = {
-    Project = "expense"
-    Component = "backend"
+    Project     = "expense"
+    Component   = "backend"
     Environment = "dev"
-    Name = "expense-backend-dev"
+    Name        = "expense-backend-dev"
   }
 }
 
 variable "from_port" {
-  type = number
+  type    = number
   default = 22
 }
 
 variable "to_port" {
-  type = number
+  type    = number
   default = 22
 }
 
 variable "cidr_blocks" {
-  type = list(string)  
+  type    = list(string)
   default = ["0.0.0.0/0"]
 }
 
 variable "sg_tags" {
-  type = map 
+  type = map(any)
   default = {
     Name = "expense-backend-dev"
   }
